@@ -138,3 +138,7 @@ fi
 if [ "$(ssh-add -l)" == "The agent has no identities." ]; then
     ssh-add
 fi
+
+# Get Vagrant working with virtualbox in WSL
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox:/mnt/c/windows/System32/:/mnt/c/windows/System32/WindowsPowerShell/v1.0"
